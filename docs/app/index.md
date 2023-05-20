@@ -26,4 +26,4 @@ docker run -p 3000:3000 cloudlabs/app
 
 After which, head on to `http://localhost:3000` to see the live website.
 
-## Project Layout
+<!-- ## Project Layout -->
