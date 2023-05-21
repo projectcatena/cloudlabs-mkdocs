@@ -1,4 +1,9 @@
 site_name: CloudLabs
+site_author: Project Catena
+site_url: https://github.com/projectcatena
+
+# Copyright
+copyright: Copyright &copy; 2023 Project Catena
 
 # Configuration
 theme:
@@ -39,6 +44,7 @@ markdown_extensions:
   - def_list
   - footnotes
   - md_in_html
+  - tables
   - toc:
       permalink: true
 
