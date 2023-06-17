@@ -58,6 +58,8 @@ POST: /api/storage/start
     ```JSON
     {
         "objectName": "Windows_Server_2019-disk1.vmdk",
-        "signedURL": "https://storage.googleapis.com/bucket_name/Windows_Server_2019-disk1.vmdk_and_more",
+        "imageName": "windows-server-2019",
+        "buildStatus": "QUEUED",
+        "buildId": "5d86bae4-263d-4ba8-a643-f90ad0fffa65"
     }
     ```
