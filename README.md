@@ -29,15 +29,31 @@ The project may be deployed locally by running the following commands:
 ```bash
 # Start the live-reloading docs server
 mkdocs serve
-
-# or to build the documentation site
-mkdocs build
 ```
 
 <!-- * `mkdocs new [dir-name]` - Create a new project. -->
 <!-- * `mkdocs serve` - Start the live-reloading docs server.
 * `mkdocs build` - Build the documentation site.
 * `mkdocs -h` - Print help message and exit. -->
+
+## How to Contribute
+
+1. Clone the repository.
+```shell
+git clone -b staging git@link_of_repo
+```
+2. Create and switch to a new branch
+```shell
+git switch -c your-new-branch-name
+```
+3. Commit changes after development
+```shell
+git commit -m "Describe your changes"
+```
+4. Push to remote repository
+```shell
+git push -u origin your-branch-name
+```
 
 ## Project layout
 
