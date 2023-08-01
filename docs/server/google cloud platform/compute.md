@@ -56,3 +56,27 @@ POST: /api/compute/create
         "maxRunDuration": 120
     }
     ```
+
+### Delete
+```
+POST: /api/compute/delete
+```
+> Parameters:
+
+>| Name                  | Type         | Description                                               | Required      |
+| -----------------------| -------------| --------------------------------------------------------- | ------------- |
+| `instanceName`         | string       | Name for the compute instance.                            | Yes           |
+
+>??? quote "Request"
+    ```JSON
+    {
+        "instanceName": "test18",
+    }
+    ```
+>??? quote "Response"
+    ```JSON
+    {
+        "instanceName": "test18",
+        "status": "DONE"
+    }
+    ```
