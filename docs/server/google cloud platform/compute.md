@@ -20,26 +20,39 @@ POST: /api/compute/create
 
 >| Name                  | Type         | Description                                               | Required      |
 | -----------------------| -------------| --------------------------------------------------------- | ------------- |
-| `name`                 | string       | Name for the compute instance.                            | Yes           |
-| `selectedImage`        | Image        | Contains the name and project URL for a machine image.    | Yes           |
-| `selectedInstanceType` | InstanceType | Contains the name of an instance type (e.g. e2-micro).    | Yes           |
+| `instanceName`         | string       | Name for the compute instance.                            | Yes           |
+| `sourceImage`          | Image        | Contains the name and project URL for a machine image.    | Yes           |
+| `machineType`          | InstanceType | Contains the name of an instance type (e.g. e2-micro).    | Yes           |
+| `startupScript`        | string       | Content of shell script to be executed on startup.        | No            |
+| `address`              | Subnet       | Subnet for the compute instance (only name is needed).    | Yes           |
+| `maxRunDuration`       | Long         | Max runtime duration for instance in seconds (120 or more)| No            |
 
 >??? quote "Request"
     ```JSON
     {
-        "name": "test",
-        "selectedImage": {
+        "instanceName": "test18",
+        "sourceImage": {
             "name": "debian-11",
-            "project": "projects/debian-cloud/global/images/family/"
+            "project": "debian-cloud"
         },
-        "selectedInstanceType": {
+        "machineType": {
             "name": "e2-micro"
-        }
+        },
+        "startupScript": "",
+        "address": {
+            "subnetName": "test-subnet-a"
+        },
+        "maxRunDuration": 120
     }
     ```
 >??? quote "Response"
     ```JSON
     {
-        d69456c0-c7c7-4360-bebd-b122e26c3b7d
+        "instanceName": "test18",
+        "address": {
+            "name": "test18-public-ip",
+            "ipv4Address": "35.240.158.214"
+        },
+        "maxRunDuration": 120
     }
     ```
