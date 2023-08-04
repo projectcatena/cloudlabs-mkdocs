@@ -80,3 +80,35 @@ POST: /api/compute/delete
         "status": "DONE"
     }
     ```
+    
+### List Machine Types
+```
+GET: /api/compute/list-machine-types
+```
+> Parameters:
+
+>| Name                  | Type         | Description                                               | Required      |
+| -----------------------| -------------| --------------------------------------------------------- | ------------- |
+| `query`                | string       | Query based on machine type name (e.g. e2-micro).         | No            |
+
+>??? quote "Request"
+    ```
+    https://localhost/api/compute/list-machine-types?query=a2
+    ```
+>??? quote "Response"
+    ```JSON
+    [
+        {
+            "name": "a2-highgpu-1g"
+        },
+        {
+            "name": "a2-highgpu-2g"
+        },
+        {
+            "name": "a2-highgpu-4g"
+        },
+        {
+            "name": "a2-highgpu-8g"
+        }
+    ]
+    ```
